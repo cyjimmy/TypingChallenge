@@ -158,7 +158,7 @@ export default function SoloChallenge() {
   };
 
   useEffect(() => {
-    const s = io();
+    const s = io("http://localhost:3001");
     setSocket(s);
   }, []);
 
