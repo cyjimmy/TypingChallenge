@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 8080;
 
 const io = require("socket.io")(3001, {
   cors: {
-    origin: `https://jimmy-typingchallenge.herokuapp.com/`,
+    origin: `http://localhost:${PORT}`,
     methods: ["GET", "POST"],
   },
 });
