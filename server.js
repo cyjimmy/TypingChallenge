@@ -14,7 +14,6 @@ const io = require("socket.io")(3001, {
 });
 
 io.on("connection", (socket) => {
-  socket.send("Hello!");
   socket.on("get-room", (room) => {
     console.log(`connected ${room}`);
     socket.join(room);

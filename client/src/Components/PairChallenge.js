@@ -178,16 +178,10 @@ export default function SoloChallenge() {
     socket.on("receive-changes", handler1);
     socket.on("receive-timer-change", handler2);
     socket.on("receive-result", handler3);
-    socket.on("message", (data) => {
-      console.log(data);
-    });
     return () => {
       socket.off("receive-changes", handler1);
       socket.off("receive-timer-change", handler2);
       socket.off("receive-result", handler3);
-      socket.off("message", (data) => {
-        console.log(data);
-      });
     };
   }, [socket]);
 
