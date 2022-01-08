@@ -158,7 +158,7 @@ export default function SoloChallenge() {
   };
 
   useEffect(() => {
-    const s = io("https://jimmy-typingchallenge.herokuapp.com/");
+    const s = io();
     setSocket(s);
   }, []);
 
